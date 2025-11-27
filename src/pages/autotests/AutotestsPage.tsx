@@ -25,10 +25,10 @@ const { Title, Text } = Typography;
 const MOCK_MARKETS = [
   { id: 'at-bk', name: 'AT: BK', status: 'completed', progress: 100, tests: 124, failed: 2 },
   { id: 'at-pb', name: 'AT: PB', status: 'running', progress: 65, tests: 89, failed: 1 },
-  { id: 'at-nyse', name: 'AT: NYSE', status: 'stopped', progress: 0, tests: 0, failed: 0 },
-  { id: 'at-lse', name: 'AT: LSE', status: 'error', progress: 30, tests: 56, failed: 5 },
-  { id: 'at-tse', name: 'AT: TSE', status: 'completed', progress: 100, tests: 78, failed: 0 },
-  { id: 'at-fwb', name: 'AT: FWB', status: 'completed', progress: 100, tests: 92, failed: 3 },
+  { id: 'at-at', name: 'AT: AT', status: 'stopped', progress: 0, tests: 0, failed: 0 },
+  { id: 'at-cy', name: 'AT: CY', status: 'error', progress: 30, tests: 56, failed: 5 },
+  { id: 'at-gr', name: 'AT: GR', status: 'completed', progress: 100, tests: 78, failed: 0 },
+  { id: 'at-fm', name: 'AT: FM', status: 'completed', progress: 100, tests: 92, failed: 3 },
 ];
 
 // Типы статусов
