@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <script>
-    sessionStorage.redirect = location.pathname;
+    // store the original path in case the app wants to restore it
+    try { sessionStorage.setItem('spa-redirect', location.pathname + location.search + location.hash); } catch(e) {}
   </script>
-  <meta http-equiv="refresh" content="0;URL='/'"></meta>
+  <!-- Redirect to the repo root for GitHub Pages -> keep assets relative to /admin-panel-test/ -->
+  <meta http-equiv="refresh" content="0;URL='/admin-panel-test/'"></meta>
 </head>
 <body></body>
 </html>

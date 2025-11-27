@@ -69,6 +69,21 @@ npm run deploy
 
 After `npm run deploy` the site will be published to `https://buddazbs.github.io/admin-panel-test`.
 
+**Deploy to InfinityFree** (or other free PHP hosting)
+
+If you want to host on a free PHP hoster like InfinityFree instead:
+
+1. Build with `base: '/'`:
+   ```bash
+   DEPLOY_TARGET=infinity-free npm run build
+   ```
+   
+2. Upload all files from `dist/` to the hoster's `public_html/` folder via FTP/File Manager.
+
+3. Ensure `.htaccess` is uploaded (it's in `public/.htaccess` and auto-copied to `dist/`).
+
+See **[DEPLOY_INFINITYFREE.md](./DEPLOY_INFINITYFREE.md)** for detailed instructions.
+
 **Developer notes & conventions**
 - **TypeScript-first**: Please add proper types in `src/entities` and `src/pages`. Avoid `any` unless temporary.
 - **Slices for state:** Use RTK `createSlice` and `createAsyncThunk` for side effects. Keep selectors colocated with slices if small.
