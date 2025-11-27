@@ -1,0 +1,156 @@
+@import 'antd/dist/reset.css';
+@import '../animations/index.css';
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Стили для тегов статусов */
+.status-tag {
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-tag.processing {
+  animation: pulse 2s infinite;
+}
+
+/* Стили для карточек дашборда */
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  transition: box-shadow 0.3s;
+}
+
+.ant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ant-card-bordered {
+  border: 1px solid #f0f0f0;
+}
+
+/* Стили для заголовков карточек */
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 16px;
+  min-height: 48px;
+}
+
+.ant-card-head-title {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 0;
+}
+
+/* Стили для статистики */
+.ant-statistic {
+  text-align: center;
+}
+
+.ant-statistic-title {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Стили для кнопок */
+.ant-btn {
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+/* Стили для меню */
+.ant-menu {
+  background: transparent;
+}
+
+.ant-menu-item {
+  border-radius: 4px;
+  margin: 2px 8px;
+}
+
+.ant-menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ant-menu-item-selected {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Стили для шапки */
+.ant-layout-header {
+  height: 64px;
+  line-height: 64px;
+  padding: 0 16px;
+}
+
+/* Стили для переключателя темы */
+.ant-switch {
+  background: #bfbfbf;
+}
+
+.ant-switch-checked {
+  background: #1890ff;
+}

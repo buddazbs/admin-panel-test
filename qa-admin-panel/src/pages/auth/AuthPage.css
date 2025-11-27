@@ -1,0 +1,9 @@
+.input-dark input::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+/* Меняем рамку при фокусе */
+.input-dark.ant-input-affix-wrapper:focus-within {
+  border-color: #f1f3f5;
+  box-shadow: 0 0 0 2px rgba(243, 243, 243, 0.2);
+}
